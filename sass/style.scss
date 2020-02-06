@@ -1,0 +1,160 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+$dark: #6f6f6f;
+$light: #4e54c8;
+
+header{
+    nav{
+        a{
+            color: black;
+        }
+        #active-a{
+            color: $light;
+        }
+        .navbar-ul{
+            padding: 15px 0;
+            margin: 0 0 0 10px;
+            background: #fff;
+            list-style: none;
+        }
+    }
+}
+
+body{
+    background-color: #f5fafe;
+    .light-title{
+        color: $light;
+    }
+    .dark-text{
+        color: $dark;
+        font-size: 14px;
+    }
+}
+
+.btn{
+    margin-top: 25px;
+    background: linear-gradient(-45deg, $light, #979eff);
+    cursor: pointer;
+    font-weight: 600;
+    color: #fff;
+    padding: 14px 28px;
+    border-radius: 30px;
+    transform: perspective(1px) translateZ(0);
+    transition: all linear 400ms;
+    border: none;
+}
+
+#home-section{
+    align-items: center;
+
+
+    .btn:hover{
+        background-color: #4e54c8;
+    }
+    #aic{
+        margin-top: 100px;
+        h1{
+            color: $light;
+        }
+        h6{
+            color: $dark;
+        }
+    }
+}
+
+#second{
+    margin-top: 150px;
+    h6{
+        color: $light;
+    }
+    .service-block {
+        position: relative;
+        padding: 40px;
+        background: #fff;
+        border-radius: 7px;
+        box-shadow: 0 0 9.9px 0.1px rgba(0,0,0,0.1);
+    }
+    .s-icon{
+        display: inline-block;
+        background: #f5fafe;
+        width: 90px;
+        height: 90px;
+        line-height: 90px;
+        color: #4e54c8;
+        font-size: 40px;
+        border: 1px solid #ececec;
+        border-radius: 50%;
+    }
+}
+
+#fourth{
+
+    ul li {
+        line-height: 24px;
+        margin-bottom: 10px;
+        position: relative;
+        padding-left: 30px;
+    }
+    ul li:hover{
+        padding-left: 40px;
+    }
+    ul li:before {
+        content: '';
+        position: absolute;
+        margin-top: 8px;
+        left: 4px;
+        width: 6px;
+        height: 6px;
+        background: #4e54c8;
+        border-radius: 100px;
+        z-index: 2;
+    }
+    ul li:after {
+        content: '';
+        position: absolute;
+        margin-top: 4px;
+        left: 0px;
+        width: 14px;
+        height: 14px;
+        background: rgba(78,84,200,0.35);
+        border-radius: 100px;
+        z-index: 1;
+    }
+}
+
+#fifth{
+    #active-type{
+        h4{
+            background-color: #4e54c8 !important;
+        }
+        
+    }
+}
+
+@each $padding-x, $padding-y, $padding-top,$padding-right,$padding-bottom,$padding-left in px, py, pt,pr,pb,pl {
+    @for $num from 0 to 60 {  
+
+        .pt#{$padding-top}-#{$num} {
+            padding-top: #{$num}px;
+        }
+
+        .pr#{$padding-right}-#{$num} {
+            padding-right: #{$num}px;
+        }
+
+        .pb#{$padding-bottom}-#{$num} {
+            padding-bottom: #{$num}px;
+        }
+
+        .pl#{$padding-left}-#{$num} {
+            padding-left: #{$num}px;
+        }
+
+    }
+}
+
